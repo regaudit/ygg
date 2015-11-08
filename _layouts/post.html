@@ -1,25 +1,21 @@
 {% include system_head.html %}
-<body class="{{ page.layout }}">
+<body class="post">
 	<div id="page">
 		{% include header.html %}
 		<div id="main" role="main">
 			<div class="main_inner">
 				<header class="hd_article">
-				<h1>{{ page.title }}</h1>
-						<div class="meta">
-								<span class="published"></span>
-								<date>
-								{{ page.date | date: "%b %d, %Y" }}
-								</date>
-						</div>
+					<h1>{{ page.title }}</h1>
+						
 				</header>
-			<article class="the_article">
+				<article class="the_article">
 				<div class="article_inner">
 					<div class="content">{{ content }}</div>
 				</div>
-			</article>
+				</article>
 			</div>
 		</div><!-- id="main" -->
+
 		<nav class="pagenation">
 		<ul>
 {% for post in site.posts %}
