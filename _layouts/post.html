@@ -4,24 +4,31 @@
 		{% include header.html %}
 		<div id="main" role="main">
 			<div class="main_inner">
-				<header class="hd_article">
-					<h1>{{ page.title }}</h1>
+				header class="hd_article">
+				<style type="text/css">
+					body {background-color: lightcyan;}
+				</style>	
+				<h1>{{ page.title }}</h1>
 						<div class="meta">
 
-								<span class="published">Published: </span>
+								<span class="published"></span>
 								<date>
 								{{ page.date | date: "%b %d, %Y" }}
 								</date>
 						</div>
 				</header>
-				<article class="the_article">
+		<body>
+			<style type="text/css">
+				body {background-color: lightcyan;}
+			</sytle>
+			<article class="the_article">
 				<div class="article_inner">
 					<div class="content">{{ content }}</div>
 				</div>
-				</article>
+			</article>
 			</div>
 		</div><!-- id="main" -->
-
+		</body>
 		<nav class="pagenation">
 		<ul>
 {% for post in site.posts %}
