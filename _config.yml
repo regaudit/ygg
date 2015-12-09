@@ -1,13 +1,46 @@
-# MUST EDIT BELOW
-sitename: YGG的成长博客       #Your site title
-tagline: 欢迎一个新生命的到来。    #You should always have a tagline
-url: http://mdrights.github.io   #URL Please
-#ga: UA-XXXXX-X              #Google Analytics ID
-#sitemap: GOOGLEWEBMASTER    #Google webmaster verification code
-# END
-# CHOOSE YOUR PREFERENCE
-highlighter: pygments
-markdown:    kramdown
-permalink:   pretty
-# END
-#exclude: LICENSE, README.markdown, Rakefile
+# SITE SETTINGS
+title: YGG的成长博客
+tagline: 欢迎一个新生命的到来
+description: ?
+    新手妈妈爸爸历险记
+url: http://mdrights.github.io
+baseurl: ""
+timezone: UTC
+excerpt_separator: <!--more-->
+email: linusyeung@live.com
+
+# Build settings
+markdown: redcarpet
+redcarpet: 
+  extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]
+exclude: [Gemfile, Gemfile.lock, README.md]
+#enforce_ssl: mdrights.github.io
+permalink: /posts/:year/:month/:title.html
+
+# Plugins
+gems:
+  - jemoji
+emoji:
+  src: "/images"
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      excerptable: true
+      sitemap: true
+      comments: true
+      layout: post
+  -
+    scope:
+      path: ""
+    values:
+      cc_by_sa: true
+  -
+    scope:
+      path: "tags"
+    values:
+      layout: tag
