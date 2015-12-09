@@ -1,46 +1,24 @@
-<html>
-{% include system_head.html %}
-<head>
-	<style type="text/css">
-		body {background-color: #FAFAD2;}
-	</style>
-</head>
+---
+layout: default
+---
 
-<body class="post">
-	<div id="page">
-		{% include header.html %}
-		<div id="main" role="main">
-			<div class="main_inner">
-				<header class="hd_article">
-					<h1>{{ page.title }}</h1>
-						
-				</header>
-				<article class="the_article">
-				<div class="article_inner">
-					<div class="content">{{ content }}</div>
-				</div>
-				</article>
-			</div>
-		</div><!-- id="main" -->
-
-		<nav class="pagenation">
-		<ul>
-{% for post in site.posts %}
-<a href="{{ post.url }}">
-<h2>{{ post.title }} &mdash; {{ post.date | date_to_string }}</h2>
-</a>
-{{ post.content }}
-{% endfor %}
-		{% if page.previous %}
-			<li class="before left"><a rel="prev" href="{{ page.previous.url }}" class="btn" title="View {{ page.previous.title }}">Before</a></li>
+<div class="post">
+	
+	<article class="post-content">
+		
+		<div class="post-header">
+			<h1 class="post-title">{{ page.title }}</h1>
+			<p class="post-meta">{% assign post = page %}{% include post_meta.html %}</p>
+		</div>
+		
+		{% if page.headpic %}
+		<p><img src="{{ site.baseurl }}/images/{{ page.date | date: "%Y/%m" }}/{{ page.headpic }}"{% if page.headpic_alt %} alt="{{ page.headpic_alt }}"{% endif %}></p>
 		{% endif %}
-		{% if page.next %}
-			<li class="next right"><a rel="next" href="{{ page.next.url }}" class="btn" title="View {{ page.next.title }}">Next</a></li>
-		{% endif %}
-		</ul>
-		</nav>
-		{% include footer.html %}
-	</div><!-- id="page" -->
-	{% include system_foot.html %}
-</body>
-</html>
+		{{ content }}
+	</article>
+	
+	{% if page.comments %}
+	{% include disqus_comment.html %}
+	{% endif %}
+	
+</div>
