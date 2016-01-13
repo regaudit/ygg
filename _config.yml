@@ -4,7 +4,7 @@ tagline: 欢迎一个新生命的到来
 description: >
     新手妈妈爸爸历险记
 url: "http://mdrights.github.io/ygg"
-baseurl: ""
+baseurl: "http://mdrights.github.io/ygg"
 timezone: UTC
 excerpt_separator: <!--more-->
 email: linusyeung@live.com
