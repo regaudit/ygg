@@ -7,10 +7,10 @@ url: "https://mdrights.github.io/ygg"
 baseurl: "https://mdrights.github.io/ygg"
 timezone: UTC
 excerpt_separator: <!--more-->
-email: [PGP](7B08 20A0 0AE6 8065 B8B3  1950 7715 B2FA 46B5 8B22)
+email: 
 
 # Build settings
-# markdown: redcarpet
+markdown: kramdown
 #redcarpet: 
 #  extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]
 exclude: [Gemfile, Gemfile.lock, README.md]
