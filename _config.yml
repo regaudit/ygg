@@ -3,16 +3,16 @@ title: YGG的成长博客
 tagline: 欢迎一个新生命的到来
 description: >
     新手妈妈爸爸历险记
-url: "http://mdrights.github.io/ygg"
-baseurl: "http://mdrights.github.io/ygg"
+url: "https://mdrights.github.io/ygg"
+baseurl: "https://mdrights.github.io/ygg"
 timezone: UTC
 excerpt_separator: <!--more-->
-email: linusyeung@live.com
+email: [PGP](7B08 20A0 0AE6 8065 B8B3  1950 7715 B2FA 46B5 8B22)
 
 # Build settings
-markdown: redcarpet
-redcarpet: 
-  extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]
+# markdown: redcarpet
+#redcarpet: 
+#  extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]
 exclude: [Gemfile, Gemfile.lock, README.md]
 #enforce_ssl: mdrights.github.io
 permalink: /posts/:year/:month/:title.html
